@@ -1,0 +1,28 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_driver: pdo_mysql
+    database_host: faitonsplzadmin.mysql.db
+    database_port: null
+    database_name: faitonsplzadmin
+    database_user: faitonsplzadmin
+    database_password: Inssetsport1
+    mailer_transport: smtp
+    mailer_host: ssl0.ovh.net
+    mailer_user: null
+    mailer_password: null
+    mailer_port: 587
+    secret: ThisTokenIsNotSoSecretChangeIt
+
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: 8889
+    database_name: faitonsportbdd
+    database_user: root
+    database_password: root
+    mailer_transport: smtp
+    mailer_host: SSL0.OVH.NET
+    mailer_user: null
+    mailer_password: null
+    secret: ThisTokenIsNotSoSecretChangeIt
+

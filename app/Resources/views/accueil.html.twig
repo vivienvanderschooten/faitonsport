@@ -1,0 +1,28 @@
+{% extends 'default.html.twig' %}
+{% block stylesheets %}
+
+    <link rel="stylesheet" href="{{ asset('css/publication.css') }}">
+{% endblock %}
+{% block body %}
+    {{ form_start(formviewPublication) }}
+    {{ form_widget(formviewPublication) }}
+    <input type="submit" value="valider">
+    {{ form_end(formviewPublication) }}
+
+
+<div class="container">
+    {% if(publications != null) %}
+
+        {% for publication in publications %}
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 publication">
+                    {{ publication.contenu }}
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        {% endfor %}
+
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ asset("css/bootstrap.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/font-awesome.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/style.css") }}">
+    <!--<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">-->
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+<nav class="navbar navbar-default navbarTOP">
+    <div class="container-fluidformHeader ">
+        <div class="navbar-header">
+            <button type="button" class="navbarToggle navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only iconBar">Toggle navigation</span>
+                <span class="icon-bar iconBar"></span>
+                <span class="icon-bar iconBar"></span>
+                <span class="icon-bar iconBar"></span>
+            </button>
+            <a class="navbarText navbar-brand" href="{{ path('homepage') }}">Faitonsport</a>
+        </div>
+
+        <div class="collapse navbar-collapse navbarForm" id="bs-example-navbar-collapse-1">
+
+            {{ render(controller('AppBundle:User:addAmis', {})) }}
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a class="navbarText" href="#"><img src="...">{{ app.user.username }}</a></li>
+                <li><a href=""><span class="IconMessage"></span></a></li>
+                <li><a href=""><span class="IconNotif"></span></a></li>
+                <li><a href=""><i class="fa fa-cog fa-lg IconSettings"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{% block body %}{% endblock %}
+{% block javascripts %}{% endblock %}
+<script src="{{ asset("js/jquery-3.1.1.min.js") }}"></script>
+<script src="{{ asset("js/bootstrap.min.js") }}"></script>
+<script src="{{ asset("js/main.js") }}"></script>
+</body>
+</html>
